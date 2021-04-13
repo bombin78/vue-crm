@@ -73,17 +73,23 @@
 </template>
 
 <script>
-import { email, required, minLength } from "vuelidate/lib/validators";
+import { email, required, minLength } from 'vuelidate/lib/validators';
+import messages from '@/utils/messages';
 
 export default {
-  name: "Login",
+  name: 'Login',
   data: () => ({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   }),
   validations: {
     email: { email, required },
     password: { required, minLength: minLength(6) },
+  },
+  mounted() {
+    if(messages[this.$route.query.message]) {
+      this.$message(messages[this.$route.query.message])
+    }
   },
   methods: {
     submitHandler() {
@@ -96,7 +102,7 @@ export default {
         password: this.password,
       };
       console.log('formData', formData);
-      this.$router.push("/");
+      this.$router.push('/');
     },
   },
 };
