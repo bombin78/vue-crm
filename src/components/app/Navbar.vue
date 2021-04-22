@@ -52,8 +52,8 @@ export default {
     dropdawn: null,
   }),
   methods: {
-    logout() {
-      console.log('Logout');
+    async logout() {
+      await this.$store.dispatch('Logout');
       this.$router.push('/login?message=logout');
     }
   },
