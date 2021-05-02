@@ -30,8 +30,9 @@ export default {
       const user = firebse.auth().currentUser;
       return user ? user.uid : null;
     },
-    async logout(){
+    async logout({commit}){
       await firebse.auth().signOut();
+      commit('clearInfo');
     }
   }
 }
