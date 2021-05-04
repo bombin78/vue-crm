@@ -6,6 +6,7 @@
       </div>
 
       <form @submit.prevent="submitHandler">
+
         <div class="input-field">
           <input 
             id="name"
@@ -42,6 +43,7 @@
           Создать
           <i class="material-icons right">send</i>
         </button>
+        
       </form>
     </div>
   </div>
