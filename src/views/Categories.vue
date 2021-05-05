@@ -49,7 +49,6 @@ export default {
     },
     updateCategories(category) {
       const idx = this.categories.findIndex(item => item.id === category.id);
-      console.log('sum', idx);
       this.categories[idx].title = category.title;
       this.categories[idx].limit = category.limit;
       this.updateCount++;
