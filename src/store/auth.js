@@ -2,12 +2,11 @@ import firebse from 'firebase/app'
 
 export default {
   actions: {
-    async login({dispatch, commit}, {email, password}) {
+    async login({commit}, {email, password}) {
 
       try {
         await firebse.auth().signInWithEmailAndPassword(email, password);
       } catch (e){
-        console.log('dispatch', dispatch);
         commit('setError', e);
         throw e;
       }
@@ -21,7 +20,6 @@ export default {
           name,
         });
       } catch (e){
-        console.log('dispatch', dispatch);
         commit('setError', e);
         throw e;
       }
