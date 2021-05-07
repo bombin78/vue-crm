@@ -24,6 +24,19 @@ export default {
         throw e;
       }
     },
+    // async fetchRecordsRange ({dispatch, commit}, page=1, limit=2) {
+    //   try {
+    //     const uid = await dispatch('getUid');
+    //     const records = (await firebase.database().ref(`/users/${uid}/records`).startAt(page).limitToFirst(limit).once('value')).val() || {};
+    //     return Object.keys(records).map(key => ({
+    //       id: key,
+    //       ...records[key],
+    //     }));
+    //   } catch(e) {
+    //     commit('setError', e);
+    //     throw e;
+    //   }
+    // },
     async fetchRecordById ({dispatch, commit}, id) {
       try {
         const uid = await dispatch('getUid');
