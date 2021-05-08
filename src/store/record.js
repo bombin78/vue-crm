@@ -24,6 +24,8 @@ export default {
         throw e;
       }
     },
+    // Закомментировано как вариант запроса для создания нормальной пагинации
+    // вместо кривой которая была добавлена в 17м уроке
     // async fetchRecordsRange ({dispatch, commit}, page=1, limit=2) {
     //   try {
     //     const uid = await dispatch('getUid');
