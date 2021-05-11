@@ -11,12 +11,12 @@ const routes = [
     meta: {layout: 'empty'},
     component: () => import('../views/Login.vue')
   },
-  {
-    path: '/register',
-    name: 'Register',
-    meta: {layout: 'empty'},
-    component: () => import('../views/Register.vue')
-  },
+  // {
+  //   path: '/register',
+  //   name: 'Register',
+  //   meta: {layout: 'empty'},
+  //   component: () => import('../views/Register.vue')
+  // },
   {
     path: '/',
     name: 'Home',

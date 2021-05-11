@@ -64,10 +64,10 @@
         </button>
       </div>
 
-      <p class="center">
+      <!-- <p class="center">
         Нет аккаунта?
         <router-link to="/register"> Зарегистрироваться </router-link>
-      </p>
+      </p> -->
     </div>
   </form>
 </template>
